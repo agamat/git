@@ -1,4 +1,4 @@
-convert a "normal" git repo to a "bare" one by doing the following:
+# convert a "normal" git repo to a "bare" one by doing the following:
 
 cd repo
 mv .git .. && rm -fr *
@@ -7,3 +7,17 @@ mv .git/* .
 rmdir .git
 git config --bool core.bare true
 cd ..; mv repo repo.git # renaming just for clarity
+
+local (change remote repository:
+git remote -v
+git remote set-url G:.......git
+
+
+# convert "bare" git repo to a "normal"  by doing the following:
+Make a .git folder in the top-level of your repository.
+Move the repository management things  into the .git you just created.
+git config --local --bool core.bare false - to convert the local git-repository to non-bare.
+checkout master, or do a git reset --hard, and you are done.
+
+
+
