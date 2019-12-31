@@ -1,0 +1,9 @@
+convert a "normal" git repo to a "bare" one by doing the following:
+
+cd repo
+mv .git .. && rm -fr *
+mv ../.git .
+mv .git/* .
+rmdir .git
+git config --bool core.bare true
+cd ..; mv repo repo.git # renaming just for clarity
