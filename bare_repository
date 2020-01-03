@@ -1,4 +1,5 @@
 # convert a "normal" git repo to a "bare" one by doing the following:
+git remote -v # show remote
 
 cd repo
 mv .git .. && rm -fr *
