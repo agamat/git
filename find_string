@@ -1,0 +1,2 @@
+git grep -n 'a' | xargs sed -i 's/a/b/g'
+find ./fff.ipynb -type f -exec sed -i 's/a/b/g' {} \;
